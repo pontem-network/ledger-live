@@ -1,0 +1,11 @@
+export type ENV = {
+  GH_TOKEN: string;
+  SEED: string;
+  API_PORT: string;
+  RPC: string;
+};
+
+export type NanoApp = {
+  version: string;
+  firmware: string;
+};
