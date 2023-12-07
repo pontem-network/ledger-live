@@ -74,6 +74,7 @@
     "network": "pnpm --filter live-network",
     "config": "pnpm --filter live-config",
     "utils": "pnpm --filter live-utils",
+    "evm-tools": "pnpm --filter evm-tools",
     "bot:github": "pnpm --filter live-github-bot",
     "ljs:cryptoassets": "pnpm --filter cryptoassets",
     "ljs:devices": "pnpm --filter devices",
