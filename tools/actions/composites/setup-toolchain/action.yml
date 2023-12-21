@@ -46,7 +46,7 @@ runs:
     - uses: actions/setup-dotnet@v3.2.0
       if: inputs.install_dotnet != ''
       with:
-        dotnet-version: 2.1.816
+        dotnet-version: 8.0.x
 
     - uses: pnpm/action-setup@v2
       with:
