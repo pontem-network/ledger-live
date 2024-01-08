@@ -1753,7 +1753,7 @@
   "DeviceAction": {
     "allowAppPermission": "Open the {{wording}} app on your device",
     "allowAppPermissionSubtitleToken": "to manage your {{token}} tokens",
-    "allowManagerPermission": "Allow Ledger Manager on your device",
+    "allowManagerPermission": "Allow Ledger Manager on your {{productName}}",
     "allowRenaming": "Allow renaming on your device",
     "loading": "Loading...",
     "connectAndUnlockDevice": "Connect and unlock your device",
@@ -2292,6 +2292,13 @@
     "confirmation": "Confirm removal of image on your Ledger Stax",
     "success": "Lock screen picture removed"
   },
+  "changeCustomLockscreen": {
+    "cta": "Change"
+  },
+  "removeCurrentPicture": {
+    "cta": "Remove current picture"
+  },
+  "appsInstallingDisabledTooltip": "Disabled until apps finish installing",
   "deviceLocalization": {
     "language": "Language",
     "deviceLanguage": "Change Device Language",
@@ -3073,7 +3080,7 @@
         "steps": {
           "starter": {
             "title": "Redelegation",
-            "description": "Use redelegation to easily change from one validator to another. But if you change your mind again, you will then have to wait because redelegation triggers a 21-day timelock.",
+            "description": "Use redelegation to easily change from one validator to another. But if you change your mind again, you will then have to wait because redelegation triggers a {{ numberOfDays }}-day timelock.",
             "warning": "Choose your validator wisely: Part of your delegated assets may be irrevocably lost if the validator does not behave appropriately. You can have a maximum of <0>7 pending redelegations</0>.",
             "howDelegationWorks": "How delegation works?"
           },
@@ -3102,7 +3109,7 @@
     },
     "undelegation": {
       "header": "Undelegation(s)",
-      "headerTooltip": "Available after the 21-day timelock",
+      "headerTooltip": "Available after the {{numberOfDays}}-day timelock",
       "inactiveTooltip": "Undelegated amounts do not generate rewards.",
       "flow": {
         "title": "Undelegate assets",
@@ -3530,7 +3537,8 @@
             "title": "Validator"
           },
           "amount": {
-            "title": "Amount"
+            "title": "Amount",
+            "reserveWarning": "Please ensure you reserve at least {{amount}} SOL in your wallet to cover future network fees to deactivate and withdraw your stake"
           },
           "confirmation": {
             "success": {
@@ -3893,9 +3901,7 @@
       "region": "Region",
       "regionDesc": "Choose your region to update formats of dates, time and currencies.",
       "stock": "Regional market indicator",
-      "stockDesc": "Choose Western to display market increases in blue or Eastern to display them in red.",
-      "carouselVisibility": "Carousel visibility",
-      "carouselVisibilityDesc": "Enable visibility of the carousel on Portfolio"
+      "stockDesc": "Choose Western to display market increases in blue or Eastern to display them in red."
     },
     "developer": {
       "search": "Search",
@@ -5588,8 +5594,7 @@
       "description": "Install the latest Bitcoin and Ethereum apps first."
     },
     "UserRefusedDeviceNameChange": {
-      "title": "Rename cancelled on device",
-      "description": "Try again and allow renaming on your device"
+      "title": "Renaming cancelled on device"
     },
     "SyncError": {
       "title": "Synchronization error",
@@ -5888,11 +5893,9 @@
       "descriptionWithProductName": "Unlock your {{ productName }} and try again."
     },
     "DeviceNotOnboardedError": {
-      "title": "Your device is not ready to use yet",
-      "titleWithProductName": "{{ productName }} is not ready to use yet",
-      "description": "You need to setup your device first.\nWe will guide you through the setup process.",
-      "descriptionWithProductName": "You need to setup your {{ productName }} first.\nWe will guide you through the setup process.",
-      "goToOnboardingButton": "Set up my device",
+      "title": "Your Ledger is not set up",
+      "description": "Set it up to start using it. We will guide you through the setup process.",
+      "goToOnboardingButton": "Set up my Ledger",
       "goToOnboardingButtonWithProductName": "Set up my {{ productName }}"
     },
     "EtherscanAPIError": {
