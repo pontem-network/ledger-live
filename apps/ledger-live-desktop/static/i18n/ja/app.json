@@ -284,7 +284,7 @@
     "lend" : "レンディング",
     "catalog" : "アプリ一覧",
     "market" : "マーケット",
-    "recover" : "Ledger Recover"
+    "recover" : "[L] Recover"
   },
   "stars" : {
     "placeholder" : "お気に入りに登録したアカウントは、こちらに表示されます。",
@@ -1166,11 +1166,13 @@
       },
       "pinContent" : {
         "title" : "PINコード",
+        "titleCompleted" : "PINコード設定済み",
         "description" : "他のパスワードやパスコードと同様に、PINを使用すると、{{productName}}のロックを解除し、不要なアクセスを防ぐことができます。",
         "continueOnDevice" : "{{productName}}にPINを設定"
       },
       "seedContent" : {
         "title" : "秘密のリカバリーフレーズ",
+        "titleCompleted" : "シークレットリカバリーフレーズ確認済み",
         "recoverSeed" : "Placeholder：Recover",
         "restoreSeed" : "資産のセキュリティを最大限に高めるため、必ずLedgerデバイスで生成したシークレットリカバリーフレーズを使用してください。\n\nシークレットリカバリーフレーズを持っていませんか？{{productName}}を使用して、新しいフレーズを生成してください。",
         "selection" : "最適な設定オプションを選択してください：",
@@ -1233,11 +1235,12 @@
         "firmwareUpdate" : {
           "title" : {
             "active" : "OSアップデートチェック",
-            "completed" : "現在の{{modelName}}OSは、最新の状態です",
+            "completed" : "{{modelName}} OSは最新の状態です。",
             "updateAvailable" : "OSアップデート{{firmwareVersion}}をご利用いただけます"
           },
           "subtitle" : {
             "active" : "これにより、{{modelName}}のオペレーティングシステムが最新かどうかがチェックされます。",
+            "completed" : "「Restore apps（アプリを復元）」ボタンを選択して{{modelName}}でアプリの復元を開始します。",
             "updateAvailable" : "最適なセキュリティを確保し、最新機能へアクセスするためにアップデートしてください。"
           },
           "viewUpdateCTA" : "{{modelName}} OSをアップデートする",
@@ -1250,12 +1253,14 @@
       },
       "installApplications" : {
         "title" : "{{productName}}にアプリをインストール",
+        "titleCompleted" : "{{productName}}にアプリインストール済み",
         "install" : "インストール",
         "skip" : "後で",
         "info" : "{{deviceName}}のアプリはトランザクションの承認に使用されます。これはいつでも追加、または削除できます。"
       },
       "endOfSetup" : {
-        "title" : "セットアップの終了"
+        "title" : "セットアップの終了",
+        "titleCompleted" : "{{deviceName}}の準備完了"
       },
       "softwareCheckAllowSecureChannelDrawer" : {
         "title" : "「許可（Allow）」をタップして正規品チェックを開始"
@@ -1296,6 +1301,18 @@
       "title" : "Ledger Staxの次は何ですか？",
       "description" : "Infinity NFTを獲得したり、ロック画面をカスタマイズしたり、\n他の取引所から資産を転送したりできます。",
       "link" : "次のステップを見る"
+    },
+    "actions" : {
+      "buyCrypto" : {
+        "title" : "暗号資産を購入する",
+        "description" : "500種類以上のコインと、購入プロバイダーによる見積もりから、お好みに合わせて選択できます。",
+        "actionCompletedPopupLabel" : "購入済み暗号資産"
+      },
+      "assetsTransfer" : {
+        "title" : "資産をLedgerに転送する",
+        "description" : "Coinbaseやその他の取引所、またはウォレットから資産を簡単に転送できます。",
+        "actionCompletedPopupLabel" : "転送済み資産"
+      }
     }
   },
   "hideNftCollection" : {
@@ -1407,6 +1424,26 @@
       "earn" : {
         "title" : "ステーキング",
         "description" : "Ledgerで暗号資産を運用"
+      }
+    },
+    "recoverBanner" : {
+      "subscribeDone" : {
+        "title" : "お支払いカードの追加を完了する",
+        "description" : "Ledger Recoverを使用して確実に復元する。",
+        "primaryCta" : "カードを追加する",
+        "secondaryCta" : "後で"
+      },
+      "verifyIdentity" : {
+        "title" : "本人認証を完了する",
+        "description" : "Ledger Recoverを使用して確実に復元する。",
+        "primaryCta" : "認証する",
+        "secondaryCta" : "後で"
+      },
+      "connectDevice" : {
+        "title" : "Ledgerを接続する",
+        "description" : "Ledger Recoverまであと1歩です。",
+        "primaryCta" : "接続",
+        "secondaryCta" : "後で"
       }
     }
   },
@@ -1719,8 +1756,8 @@
     "loading" : "読み込み中...",
     "connectAndUnlockDevice" : "デバイスを接続してロックを解除する",
     "unlockDevice" : "デバイスのロックを解除する",
-    "unlockDeviceAfterFirmwareUpdateStep1" : "{{productName}}のインストールが完了するまでお待ちください",
-    "unlockDeviceAfterFirmwareUpdateStep2" : "{{productName}}のロックを解除してインストールを完了",
+    "unlockDeviceAfterFirmwareUpdateStep1" : "{{productName}}でインストールが完了するまで待機してください。",
+    "unlockDeviceAfterFirmwareUpdateStep2" : "PINコードを使用して{{productName}}のロックを解除し、アップデートを完了します。",
     "quitApp" : "デバイスのアプリケーションを終了する",
     "appNotInstalledTitle" : "必要なアプリが揃っていません。",
     "appNotInstalledTitle_plural" : "必要なアプリが揃っていません。",
@@ -1786,7 +1823,7 @@
       "capacity" : "容量",
       "used" : "使用中",
       "OSVersion" : "OSバージョン",
-      "genuine" : "お使いのデバイスは正規品です。",
+      "genuine" : "正規品チェック",
       "incomplete" : "一部のアプリが認識されませんでした。アンインストールしてから、再インストールしてください。"
     },
     "applist" : {
@@ -1893,20 +1930,24 @@
       "latest" : "ファームウェアバージョン{{version}}が利用可能です",
       "contactSupport" : "サポートへのお問い合わせ",
       "deprecated" : "デバイスのファームウェアのバージョンが古いため、アップデートできません。Ledgerサポートに連絡して、デバイスを交換してください。",
-      "prepareSeed" : "万が一に備えて、24単語のリカバリーフレーズを書き留めたリカバリーシートを用意してください。",
+      "prepareSeed" : "念のために、24単語のリカバリーフレーズがリカバリーシートに書き留められており、利用可能であることを確認してください。",
       "disclaimerTitle" : "<1>ファームウェアバージョン{{version}}</1>をインストールします。",
-      "cancelUpdate" : "アップデートをキャンセル",
-      "continueUpdate" : "アップデートを続行",
-      "cancelUpdateWarning" : "今アップデートをキャンセルすると、設定とアプリが正しく復元されない可能性があります。",
+      "cancelUpdate" : "OSアップデートをキャンセル",
+      "continueUpdate" : "OSアップデートを続行",
+      "restartUpdate" : "OSアップデートを再開",
+      "skipRestore" : "復元をスキップ",
+      "cancelUpdateWarning" : "今アップデートをキャンセルすると、\n設定とアプリが正しく復元されない可能性があります。",
       "updateInProgress" : "OSアップデート中"
     },
     "modal" : {
       "title" : "{{productName}}OSアップデート",
       "steps" : {
-        "preparingUpdate" : "設定とアプリのバックアップ",
+        "preparingUpdate" : "設定とアプリの\nバックアップ",
         "transferringUpdate" : "アップデートを{{productName}}に転送中",
         "prepare" : "アップデートの準備",
+        "prepareDone" : "アップデートの\nインストール準備が完了",
         "install" : "アップデートをインストール",
+        "installDone" : "アップデートが\nインストール済み",
         "restore" : "設定の復元",
         "apps" : "アプリの復元",
         "updateMCU" : "ファームウェアをアップデート",
@@ -1915,12 +1956,13 @@
         "osu" : "OSUをインストール中...",
         "flash-mcu" : "MCUをアップデート中...",
         "flash-bootloader" : "Bootloaderをアップデート中...",
-        "progress" : "アップデートをインストール中{{current}}/{{total}}",
+        "progress" : "アップデートをインストール中",
+        "progressStep" : "アップデートをインストール中{{current}}/{{total}}",
         "firmware" : "ファームウェアのアップデート中...",
         "flash" : "デバイスの準備中..."
       },
       "confirmIdentifier" : "識別子を確認する",
-      "confirmIdentifierText" : "「Install（インストール）」をタップするとOSのアップデートが始まります",
+      "confirmIdentifierText" : "「Install（インストール）」をタップして\nOSアップデートを開始",
       "identifier" : "識別子",
       "newFirmware" : "新しいファームウェア{{version}}",
       "confirmUpdate" : "アップデートをデバイスで確定してください。",
@@ -1928,13 +1970,15 @@
       "mcuFirst" : "デバイスからUSBケーブルを外す",
       "mcuSecond" : "USBケーブルを再接続し、{{repairProcessing}}画面が表示されるまで左ボタンを<1><0>長押し</0></1>",
       "mcuPin" : "アップデートが完了するまでお待ちください",
+      "mcuRestart" : "{{device}}は複数回再起動する場合があります。",
       "mcuSecondNanoX" : "<1><0> {{bootloaderOption}}</0></1>が表示されるまで左ボタンを長押しする。両方のボタンを押して、デバイスを確認して再接続します。",
       "mcuBlueFirst" : "ボタンを10秒間長押しして、デバイスの電源をオフにする。ボタンから指を離す。",
       "mcuBlueSecond" : "ブートオプションが表示されるまで、少なくとも5秒間ボタンを押し続けます。Bootloaderモードをタップしてください。",
-      "successTitle" : "{{deviceName}} OSは最新の状態です",
-      "sucessCTAApps" : "アプリを再インストール",
-      "SuccessCTANoApps" : "アプリをインストール",
-      "cancelReinstallCTA" : "アップデートをインストール",
+      "successTitle" : "{{deviceName}} のOSは\n最新の状態です",
+      "successTitleApps" : "{{deviceName}}のOSは\n最新の状態です。最後に...",
+      "successSubtitleApps" : "Ledger Staxでアプリの復元を開始するには、\n下の「Restore apps（アプリを復元）」ボタンを選択します。",
+      "sucessCTAApps" : "アプリを復元",
+      "SuccessCTANoApps" : "終了する",
       "resetSteps" : {
         "first" : "1. デバイスをリセットする",
         "connect" : "USBケーブルを使用して、 {{deviceName}}をコンピュータに接続。",
@@ -2260,7 +2304,7 @@
       "title" : "{{deviceName}}を{{language}}に設定しますか？",
       "description" : "{{language}}が{{deviceName}}でご利用可能になりました。今すぐ設定できます。また、My Ledgerからいつでもデバイスの言語を変更することが可能です。"
     },
-    "allowLanguageInstallation" : "言語のインストールを許可する",
+    "allowLanguageInstallation" : "言語をインストールするには\n「Allow（許可）」をタップする",
     "languageInstalled" : "言語が{{language}}に変更されました",
     "installingLanguage" : "言語をインストール",
     "languages" : {
@@ -3554,6 +3598,9 @@
       }
     }
   },
+  "graph" : {
+    "noGraphWarning" : "このトークンでは、グラフを使用できません"
+  },
   "near" : {
     "account" : {
       "stakedBalance" : "ステーキング済み残高",
@@ -4099,8 +4146,7 @@
     "updateAvailable" : "Ledger Liveバージョン {{version}} へのアップデートが利用可能です。",
     "error" : "更新中にエラーが発生再度ダウンロードしてください",
     "reDownload" : "再度ダウンロード",
-    "nightlyWarning" : "このバージョンは自動更新できません。手動で最新バージョンをインストールしてください。",
-    "downloadNow" : "アップデートをダウンロード"
+    "nightlyWarning" : "このバージョンは自動更新できません。手動で最新バージョンをインストールしてください。"
   },
   "crash" : {
     "title" : "問題が発生しました。",
@@ -5155,8 +5201,8 @@
       "description" : "問題が解決しない場合は、再度お試しいただくか、Ledgerサポートにお問い合わせください。"
     },
     "LanguageInstallRefusedOnDevice" : {
-      "title" : "言語のインストールがデバイス上で拒否されました",
-      "description" : "もう一度お試しください。問題が解決しない場合は、以下のボタンを使ってログを保存し、Ledgerサポートに提出してください。"
+      "title" : "デバイスで言語の復元が\nキャンセルされました",
+      "description" : "これが間違いである場合は、今すぐ再試行してください。"
     },
     "RestoreLanguageInstallRefusedOnDevice" : {
       "title" : "Ledger Staxで言語の復元がキャンセルされました",
@@ -5257,6 +5303,18 @@
       "title" : "トランザクション手数料の支払いに十分なEGLDがありません",
       "description" : "EGLDをアカウントに送付し、トランザクションの支払いを行ってください。"
     },
+    "NotEnoughVTHO" : {
+      "title" : "VTHO資金が不足しています",
+      "description" : "アカウントに十分なVTHO資金があることをご確認ください。"
+    },
+    "MustBeVechain" : {
+      "title" : "VeChainアカウントではありません",
+      "description" : "コインがVTHOまたはVETであることをご確認ください"
+    },
+    "ImpossibleToCalculateAmountAndFees" : {
+      "title" : "金額と手数料を算出できません",
+      "description" : "金額と手数料を算出できません"
+    },
     "NotEnoughBalance" : {
       "title" : "資金が不足しています。",
       "description" : "アカウントに十分な資金があることを確認してください。"
@@ -5349,8 +5407,8 @@
       "title" : "My Ledgerがデバイスで拒否されました"
     },
     "UserRefusedFirmwareUpdate" : {
-      "title" : "デバイス上でアップデートがキャンセルされました",
-      "description" : "デバイスでOSアップデートのインストールが拒否されました。誤った操作である場合は、アップデートを再開してください。"
+      "title" : "デバイスでOSアップデートのインストールが\nキャンセルされました",
+      "description" : "誤った操作である場合は、アップデートを再開してください。"
     },
     "UserRefusedOnDevice" : {
       "title" : "アクションが拒否されました。",
@@ -5753,12 +5811,12 @@
       "description" : "別の画像でもう一度お試しください"
     },
     "ImageCommitRefusedOnDevice" : {
-      "title" : "Ledger Staxでロック画面がキャンセルされました",
-      "description" : "この画像が正しくない場合は、別の画像で再度お試しいただけます。"
+      "title" : "Ledger Staxでロック画面画像のインストールが\nキャンセルされました",
+      "description" : "これが間違いである場合は、今すぐ再試行してください。"
     },
     "ImageLoadRefusedOnDevice" : {
-      "title" : "Ledger Staxでロック画面がキャンセルされました",
-      "description" : "この画像が正しくない場合は、別の画像で再度お試しいただけます。"
+      "title" : "Ledger Staxでロック画面画像のインストールが\nキャンセルされました",
+      "description" : "これが間違いである場合は、今すぐ再試行してください。"
     },
     "ImageDoesNotExistOnDevice" : {
       "title" : "お持ちのLedger Staxには削除するロック画面の画像がありません",
@@ -5880,13 +5938,13 @@
       "transfer" : {
         "stepLabel" : "読み込む",
         "useAnotherPicture" : "別の写真をアップロード",
-        "allowPreview" : "「Load picture（画像を読み込む）」をタップしてロック画面をカスタマイズ",
-        "allowConfirmPreview" : "{{productName}}でロック画面の画像の復元を許可する",
-        "loadingPicture" : "読み込み中...",
+        "allowPreview" : "「Load picture（画像を読み込む）」をタップして\nロック画面画像をカスタマイズする",
+        "allowConfirmPreview" : "「Load picture（画像を読み込む）」をタップして\nロック画面画像を復元する",
+        "loadingPicture" : "インストール中...",
         "voila" : "これで完了です！",
         "imageLoaded" : "{{productName}}に画像が読み込まれました",
         "confirmPicture" : "気に入りましたか？\n",
-        "confirmRestorePicture" : "ロック画面の画像の復元を確定する",
+        "confirmRestorePicture" : "「Keep（保持）」をタップすると\nロック画面画像が確定されます",
         "doThisLater" : "後で"
       }
     },
@@ -5914,7 +5972,6 @@
     },
     "progress" : {
       "loading" : "読み込み中...",
-      "resolving" : "依存関係を解決しています",
       "progress" : "アプリのインストール中でもLedger Liveをお使いいただけます。",
       "disclaimer" : "Ledger Liveからいつでもアプリを追加または削除できます。",
       "skippedInfo" : "一部のアプリはご利用いただけません。{{ productName }}は今後開発予定です。",
