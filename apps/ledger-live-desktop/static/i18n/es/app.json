@@ -284,7 +284,7 @@
     "lend" : "Prestar",
     "catalog" : "Discover",
     "market" : "Mercado",
-    "recover" : "Ledger Recover"
+    "recover" : "[L] Recover"
   },
   "stars" : {
     "placeholder" : "Tus cuentas favoritas aparecerán aquí.",
@@ -390,7 +390,7 @@
     "decentralizedSwapAvailable" : "Para determinadas transacciones, quizás deberías considerar la opción de usar la permuta descentralizada. Descubre <0>ParaSwap</0> y <1>1inch</1>.",
     "paraswap" : {
       "cta" : " Échale un vistazo",
-      "description" : "¿Buscas Paraswap? Está en a la pestaña Discover."
+      "description" : "¿Buscas ParaSwap? Está en a la pestaña Discover."
     },
     "tabs" : {
       "exchange" : "Cambia",
@@ -1166,13 +1166,15 @@
       },
       "pinContent" : {
         "title" : "PIN",
+        "titleCompleted" : "PIN establecido",
         "description" : "Al igual que cualquier contraseña o código de acceso, el PIN te permite desbloquear tu {{productName}} e impedir accesos no deseados.",
         "continueOnDevice" : "Configura tu PIN en tu {{productName}}"
       },
       "seedContent" : {
         "title" : "Frase de recuperación secreta",
+        "titleCompleted" : "Frase de recuperación secreta confirmada",
         "recoverSeed" : "Marcador de posición: Recover",
-        "restoreSeed" : "Para que tus activos estén lo más seguros posible, utiliza una Frase de recuperación secreta generada por un dispositivo Ledger.\n\n¿No tienes uno?Usa tu {{productName}} para generar una Frase nueva.",
+        "restoreSeed" : "Para que tus activos estén lo más seguros posible, utiliza una Frase de recuperación secreta generada por un dispositivo Ledger.\n\n¿No tienes uno? Usa tu {{productName}} para generar una Frase nueva.",
         "selection" : "Elige la opción de configuración que mejor se ajuste a tus necesidades:",
         "selectionNewLedger" : "<0>“Configura tu dispositivo como un nuevo Ledger”</0> te permitirá crear una nueva billetera. Esta acción generará una Frase de recuperación secreta nueva.",
         "selectionRestore" : "<0>“Restaurar”</0> te permitirá restaurar el acceso a activos que ya tengas con tu Frase de recuperación secreta o mediante Ledger Recover.",
@@ -1233,11 +1235,12 @@
         "firmwareUpdate" : {
           "title" : {
             "active" : "Verificación de actualización del SO",
-            "completed" : "El SO de tu {{modelName}} está actualizado",
+            "completed" : "El SO de tu {{modelName}} está actualizado.",
             "updateAvailable" : "Actualización del SO {{firmwareVersion}} disponible"
           },
           "subtitle" : {
             "active" : "Se verificará si el sistema operativo de tu {{modelName}} está actualizado o no.",
+            "completed" : "Para iniciar la restauración de la aplicación en tu {{modelName}}, selecciona el botón “Restaurar aplicaciones” a continuación.",
             "updateAvailable" : "Actualízalo para disfrutar de una seguridad óptima y acceder a las funciones más recientes."
           },
           "viewUpdateCTA" : "Actualizar SO del {{modelName}}",
@@ -1250,12 +1253,14 @@
       },
       "installApplications" : {
         "title" : "Instalar aplicaciones en {{productName}}",
+        "titleCompleted" : "Aplicaciones instaladas en {{productName}}",
         "install" : "Instalar",
         "skip" : "Recordar más adelante",
         "info" : "Las aplicaciones el {{deviceName}} se usan para aprobar transacciones. Puedes añadirlas o eliminarlas cuando quieras."
       },
       "endOfSetup" : {
-        "title" : "Fin de la configuración"
+        "title" : "Fin de la configuración",
+        "titleCompleted" : "{{deviceName}} está listo"
       },
       "softwareCheckAllowSecureChannelDrawer" : {
         "title" : "Toca “Allow” (Permitir) para iniciar la Verificación de Autenticidad."
@@ -1296,6 +1301,18 @@
       "title" : "¿Qué es lo siguiente con tu Ledger Stax?",
       "description" : "Reclama el NFT Infinity, personaliza su pantalla de bloqueo o\ntransfiere tus activos desde otros exchanges.",
       "link" : "Mira lo que puedes hacer ahora"
+    },
+    "actions" : {
+      "buyCrypto" : {
+        "title" : "Comprar cripto",
+        "description" : "Elige entre más de 500 monedas y las mejores ofertas de proveedores de compras, adaptadas a tus preferencias.",
+        "actionCompletedPopupLabel" : "Cripto comprada"
+      },
+      "assetsTransfer" : {
+        "title" : "Transferir tus activos al Ledger",
+        "description" : "Transfiere fácilmente activos desde Coinbase o cualquier otro exchange o billetera.",
+        "actionCompletedPopupLabel" : "Activos transferidos"
+      }
     }
   },
   "hideNftCollection" : {
@@ -1407,6 +1424,26 @@
       "earn" : {
         "title" : "Poner en participación",
         "description" : "Con Ledger tus cripto generan intereses"
+      }
+    },
+    "recoverBanner" : {
+      "subscribeDone" : {
+        "title" : "Termina de agregar tu tarjeta de pago",
+        "description" : "Restauración fiable con Ledger Recover.",
+        "primaryCta" : "Agregar tarjeta",
+        "secondaryCta" : "Quizás más tarde"
+      },
+      "verifyIdentity" : {
+        "title" : "Termina de verificar tu identidad",
+        "description" : "Restauración fiable con Ledger Recover.",
+        "primaryCta" : "Verificar",
+        "secondaryCta" : "Quizás más tarde"
+      },
+      "connectDevice" : {
+        "title" : "Conecta tu Ledger",
+        "description" : "Solo te queda un paso para disfrutar de Ledger Recover.",
+        "primaryCta" : "Conectar",
+        "secondaryCta" : "Quizás más tarde"
       }
     }
   },
@@ -1719,8 +1756,8 @@
     "loading" : "Cargando...",
     "connectAndUnlockDevice" : "Conecta y desbloquea tu dispositivo",
     "unlockDevice" : "Desbloquea tu dispositivo",
-    "unlockDeviceAfterFirmwareUpdateStep1" : "Espera a que finalice la instalación en {{productName}}",
-    "unlockDeviceAfterFirmwareUpdateStep2" : "Desbloquear {{productName}} para finalizar la instalación",
+    "unlockDeviceAfterFirmwareUpdateStep1" : "Espera a que finalice la instalación en tu {{productName}}.",
+    "unlockDeviceAfterFirmwareUpdateStep2" : "Desbloquea {{productName}} con tu PIN para terminar de completar la actualización.",
     "quitApp" : "Cierra la aplicación en tu dispositivo",
     "appNotInstalledTitle" : "Falta una aplicación necesaria",
     "appNotInstalledTitle_plural" : "Faltan aplicaciones necesarias",
@@ -1786,7 +1823,7 @@
       "capacity" : "Capacidad",
       "used" : "Utilizado",
       "OSVersion" : "Versión del SO",
-      "genuine" : "El dispositivo es auténtico",
+      "genuine" : "Verificación de autenticidad",
       "incomplete" : "No se reconocieron algunas aplicaciones. Desinstálalas y luego vuelve a instalarlas."
     },
     "applist" : {
@@ -1893,10 +1930,12 @@
       "latest" : "La versión {{version}} del firmware está disponible",
       "contactSupport" : "Ponte en contacto con Soporte",
       "deprecated" : "La versión de firmware del dispositivo es demasiado antigua para poder actualizarla. Contacta al Soporte de Ledger para obtener un reemplazo.",
-      "prepareSeed" : "Como precaución, asegúrate de que la Frase de recuperación de 24 Palabras esté escrita en la Hoja de recuperación y de tener fácil acceso a ella.",
+      "prepareSeed" : "Como precaución, asegúrate de que la Frase de recuperación de 24 palabras esté escrita en la Hoja de recuperación y de tener fácil acceso a ella.",
       "disclaimerTitle" : "Estás a punto de instalar <1>la versión de firmware {{version}}</1>.",
-      "cancelUpdate" : "Cancelar actualización",
-      "continueUpdate" : "Continuar con la actualización",
+      "cancelUpdate" : "Cancelar actualización del SO",
+      "continueUpdate" : "Continuar con actualización del SO",
+      "restartUpdate" : "Reiniciar actualización de SO",
+      "skipRestore" : "Omitir restauración",
       "cancelUpdateWarning" : "Si cancelas la actualización ahora, tus ajustes y aplicaciones podrían no restaurarse correctamente.",
       "updateInProgress" : "Actualización del SO en curso"
     },
@@ -1906,7 +1945,9 @@
         "preparingUpdate" : "Copia de seguridad de tus ajustes y tus aplicaciones",
         "transferringUpdate" : "Transfiriendo la actualización a {{productName}}",
         "prepare" : "Preparando actualización",
+        "prepareDone" : "Actualización lista para instalar",
         "install" : "Instalar actualización",
+        "installDone" : "Actualización\ninstalada",
         "restore" : "Restaurando ajustes",
         "apps" : "Restaurando aplicaciones",
         "updateMCU" : "Actualización de firmware",
@@ -1915,7 +1956,8 @@
         "osu" : "Instalando OSU...",
         "flash-mcu" : "Actualizando MCU...",
         "flash-bootloader" : "Actualizando Bootloader...",
-        "progress" : "Instalando actualización {{current}}/{{total}}",
+        "progress" : "Instalando actualización",
+        "progressStep" : "Instalando actualización {{current}}/{{total}}",
         "firmware" : "Actualizando firmware...",
         "flash" : "Preparando tu dispositivo..."
       },
@@ -1928,13 +1970,15 @@
       "mcuFirst" : "Desconecta el cable USB de tu dispositivo.",
       "mcuSecond" : "Mantén presionado el botón izquierdo mientras vuelves a conectar el cable USB hasta que aparezca la pantalla <1><0>{{repairProcessing}}</0></1>",
       "mcuPin" : "Espera a que finalice la actualización",
+      "mcuRestart" : "{{device}} podría reiniciarse varias veces.",
       "mcuSecondNanoX" : "Mantén presionado el botón izquierdo hasta que aparezca <1><0>{{bootloaderOption}}</0></1>. Presiona ambos botones para confirmar y vuelve a conectar tu dispositivo.",
       "mcuBlueFirst" : "Mantén presionado el botón lateral durante 10 segundos para apagar el dispositivo. Suelta el botón.",
       "mcuBlueSecond" : "Mantén presionado el botón durante al menos 5 segundos hasta que se muestren las “Boot Options” (\"Opciones de arranque\"). Toca en Bootloader Mode",
       "successTitle" : "El SO de tu {{deviceName}} está actualizado.",
-      "sucessCTAApps" : "Volver a instalar las aplicaciones",
-      "SuccessCTANoApps" : "Instalar aplicaciones",
-      "cancelReinstallCTA" : "Instalar actualización",
+      "successTitleApps" : "El SO de tu {{deviceName}}\nestá actualizado. Una última cosa...",
+      "successSubtitleApps" : "Para iniciar la restauración de la aplicación en tu Ledger Stax, selecciona\nel botón “Restaurar aplicaciones” a continuación.",
+      "sucessCTAApps" : "Restaurando aplicaciones",
+      "SuccessCTANoApps" : "Finalizar",
       "resetSteps" : {
         "first" : "1. Restablece tu dispositivo",
         "connect" : "Conecta el {{deviceName}} a tu PC utilizando el cable USB.",
@@ -1999,7 +2043,7 @@
         "success" : {
           "title" : "",
           "textNRG" : "Empezarás a ganar Energía una vez que la red haya confirmado la inmovilización. En breve podrás votar por superrepresentantes para recibir recompensas.",
-          "text" : "Empezarás a ganar Ancho de banda una vez que la red haya confirmado la inmovilización. En breve podrás votar por superrepresentates para recibir recompensas.",
+          "text" : "Empezarás a ganar Ancho de banda una vez que la red haya confirmado la inmovilización. En breve podrás votar por superrepresentantes  para recibir recompensas.",
           "votePending" : "Votar en {{time}}",
           "vote" : "Votar",
           "later" : "Votar más tarde"
@@ -2225,7 +2269,7 @@
     "title" : "Diagnosticar problemas de red"
   },
   "systemLanguageAvailable" : {
-    "title" : "¿Deseas cambiar el idioma de tu app?",
+    "title" : "¿Deseas cambiar el idioma de tu aplicación?",
     "description" : {
       "newSupport" : "¡Buenas noticias! Nuestros equipos han trabajado arduamente y Ledger Live ahora está disponible en {{language}}",
       "advice" : "Puedes cambiar el idioma más adelante desde los Ajustes."
@@ -2258,9 +2302,9 @@
     },
     "firmwareUpdatePrompt" : {
       "title" : "¿Cambiar tu {{deviceName}} a {{language}}?",
-      "description" : "Ya está disponible el idioma {{language}} para tu {{deviceName}}. Puedes cambiar el idioma de tu dispositivo ahora o en cualquier momento desde My Ledger."
+      "description" : "Ya está disponible el idioma {{language}} para tu {{deviceName}}. Puedes cambiar el idioma de tu dispositivo ahora o en cualquier momento desde Mi Ledger."
     },
-    "allowLanguageInstallation" : "Permitir instalación de idioma",
+    "allowLanguageInstallation" : "Pulsa “Allow” (Permitir) para\ninstalar el idioma",
     "languageInstalled" : "Idioma cambiado al {{language}}",
     "installingLanguage" : "Instalando idioma",
     "languages" : {
@@ -3554,6 +3598,9 @@
       }
     }
   },
+  "graph" : {
+    "noGraphWarning" : "El gráfico no está disponible para este token"
+  },
   "near" : {
     "account" : {
       "stakedBalance" : "Saldo en participación",
@@ -4099,8 +4146,7 @@
     "updateAvailable" : "Se encuentra disponible la actualización a la versión {{version}} de Ledger Live",
     "error" : "Error durante la actualización. Descárgala de nuevo",
     "reDownload" : "Descargar de nuevo",
-    "nightlyWarning" : "Esta versión no puede actualizarse automáticamente. Instala la última versión manualmente",
-    "downloadNow" : "Descargar actualización"
+    "nightlyWarning" : "Esta versión no puede actualizarse automáticamente. Instala la última versión manualmente"
   },
   "crash" : {
     "title" : "Algo ha salido mal",
@@ -4119,7 +4165,7 @@
     "noAccounts" : "No hay cuentas que exportar",
     "selectedAccounts" : "Cuentas a incluir",
     "selectedAccounts_plural" : "Cuentas a incluir ({{count}})",
-    "disclaimer" : "Los contravalores de la exportación se ofrecen únicamente a título informativo. No se debe confiar en estos datos para fines contables, fiscales, regulatorios o legales, ya que solo representan una estimación del precio de los activos en el momento de las transacciones y la exportación, según los métodos de valoración proporcionados por nuestro proveedor de servicios, Kaiko."
+    "disclaimer" : "Los contravalores de la exportación se ofrecen únicamente a título informativo. No se debe confiar en estos datos para fines contables, fiscales, regulatorios o legales, ya que solo representan una estimación del precio de los activos en el momento de las transacciones y la exportación, según los métodos de reseña proporcionados por nuestro proveedor de servicios, Kaiko."
   },
   "language" : {
     "system" : "Utilizar idioma del sistema",
@@ -4277,7 +4323,7 @@
         }
       },
       "selectDevice" : {
-        "title" : "¿Para qué sirve tu Ledger?",
+        "title" : "¿Qué Ledger tienes?",
         "selectLabel" : "Seleccionar"
       },
       "selectUseCase" : {
@@ -4430,7 +4476,7 @@
           "pinCodeHowTo" : {
             "setUp" : {
               "title" : "Elige un código PIN",
-              "descr" : "Presiona el botón izquierdo o derecho para cambiar números. Presiona ambos botones para confirmar un número. Selecciona <0></0> para confirmar tu código PIN. Selecciona <1></1> para borrar un número."
+              "descr" : "Presiona el botón izquierdo o derecho para desplazarte por los números. Presiona ambos botones para confirmar un número. Selecciona <0></0> para confirmar tu código PIN. Selecciona <1></1> para borrar un número."
             },
             "confirm" : {
               "title" : "Confirma código PIN",
@@ -4477,7 +4523,7 @@
             },
             "warning" : {
               "title" : "No utilices una Frase de recuperación que no hayas generado tú mismo.",
-              "desc" : "Tú y solo tú debes crear el código PIN y generar la Frase de recuperación de la billetera de hardware Ledger. Si has recibido un dispositivo con una Frase semilla o un código PIN ya existentes,no utilices el producto y ponte en contacto con el Soporte.",
+              "desc" : "Tú y solo tú debes crear el código PIN y generar la Frase de recuperación de la billetera de hardware Ledger. Si has recibido un dispositivo con una Frase semilla o un código PIN ya existentes, no utilices el producto y ponte en contacto con el Soporte.",
               "supportLink" : "Ponte en contacto con Soporte"
             }
           },
@@ -4576,7 +4622,7 @@
           "hideRecoveryPhrase" : {
             "title" : "Oculta tu Frase de recuperación",
             "paragraph" : "Tu Frase de recuperación es la única manera de recuperar tus cripto, en caso de no ser posible utilizar tu Nano. Debes conservarla en un lugar seguro.",
-            "keepItOffline" : "Ingresa estas Palabras únicamente en una billetera de hardware, no en PCs, ni en smartphones.",
+            "keepItOffline" : "Ingresa estas Palabras únicamente en una billetera de hardware, no la ingreses en una PC, ni en otros dispositivos como un smartphone.",
             "neverShowToAnyone" : "Nunca compartas tus 24 Palabras con nadie, ni siquiera con Ledger.",
             "buttons" : {
               "next" : "Bien, ¡he terminado!",
@@ -4962,7 +5008,7 @@
   "errors" : {
     "ReplacementTransactionUnderpriced" : {
       "title" : "El precio de la transacción de sustitución es más bajo",
-      "description" : "La tarifa de red podría ser demasiado baja.Auméntala."
+      "description" : "La tarifa de red podría ser demasiado baja. Auméntala."
     },
     "NoSuchAppOnProvider" : {
       "title" : "No es posible encontrar la aplicación {{appName}} para tu configuración específica.",
@@ -5155,8 +5201,8 @@
       "description" : "Inténtalo de nuevo o contacta a Soporte de Ledger si persiste el problema."
     },
     "LanguageInstallRefusedOnDevice" : {
-      "title" : "Se ha rechazado la instalación del idioma en el dispositivo",
-      "description" : "Inténtalo de nuevo. Si el problema persiste, guarda los registros con el botón que aparece a continuación y envíalos al Soporte de Ledger."
+      "title" : "Restauración de idioma\ncancelada en el dispositivo",
+      "description" : "Si hubo un error, inténtalo de nuevo."
     },
     "RestoreLanguageInstallRefusedOnDevice" : {
       "title" : "La restauración del idioma se canceló en Ledger Stax",
@@ -5208,17 +5254,17 @@
     },
     "ManagerQuitPage" : {
       "install" : {
-        "title" : "¿Finalizar instalación de aplicaciones en curso?",
+        "title" : "¿Esperar y finalizar la instalación de aplicaciones en curso?",
         "description" : "Al salir de Mi Ledger, se interrumpirá la instalación de aplicaciones. Finaliza la instalación para instalar las aplicaciones en cola.",
         "stay" : "Finalizar instalación"
       },
       "uninstall" : {
-        "title" : "¿Finalizar la desinstalación de la aplicación en curso?",
+        "title" : "¿Esperar y finalizar la desinstalación de la aplicación en curso?",
         "description" : "Al salir de Mi Ledger, se interrumpirán las desinstalaciones de aplicaciones en curso.",
         "stay" : "Finalizar la desinstalación"
       },
       "update" : {
-        "title" : "¿Finalizar la actualización de aplicación en curso?",
+        "title" : "¿Esperar y finalizar la actualización de aplicaciones en curso?",
         "description" : "Al salir de Mi Ledger, se interrumpirán las actualizaciones de aplicaciones en curso.",
         "stay" : "Finalizar actualizaciones"
       },
@@ -5256,6 +5302,18 @@
     "NotEnoughEGLDForFees" : {
       "title" : "EGLD insuficientes para pagar las tarifas de transacción",
       "description" : "Envía EGLD a tu cuenta para pagar las transacciones."
+    },
+    "NotEnoughVTHO" : {
+      "title" : "Lo sentimos, fondos de VTHO insuficientes",
+      "description" : "Asegúrate de que la cuenta tenga VTHO suficientes."
+    },
+    "MustBeVechain" : {
+      "title" : "No es una cuenta de VeChain",
+      "description" : "Asegúrate de que la moneda es VTHO o VET"
+    },
+    "ImpossibleToCalculateAmountAndFees" : {
+      "title" : "No es posible calcular la cantidad y las tarifas",
+      "description" : "No es posible calcular la cantidad y las tarifas"
     },
     "NotEnoughBalance" : {
       "title" : "Fondos insuficientes",
@@ -5349,8 +5407,8 @@
       "title" : "Mi Ledger denegado en el dispositivo"
     },
     "UserRefusedFirmwareUpdate" : {
-      "title" : "La actualización se canceló en el dispositivo",
-      "description" : "Se ha rechazado la instalación de la actualización del SO en tu dispositivo. Si se trata de un error, vuelve a iniciar la actualización."
+      "title" : "Instalación de actualización de SO\ncancelada en el dispositivo",
+      "description" : "Si se trata de un error, vuelve a iniciar la actualización."
     },
     "UserRefusedOnDevice" : {
       "title" : "Acción rechazada",
@@ -5753,12 +5811,12 @@
       "description" : "Vuelve a intentarlo con otra imagen"
     },
     "ImageCommitRefusedOnDevice" : {
-      "title" : "Pantalla de bloqueo cancelada en Ledger Stax",
-      "description" : "Si la imagen no era la adecuada, puedes intentarlo de nuevo con una diferente."
+      "title" : "Instalación de la imagen de pantalla de bloqueo\ncancelada en Ledger Stax",
+      "description" : "Si ha sido un error, inténtalo de nuevo."
     },
     "ImageLoadRefusedOnDevice" : {
-      "title" : "Pantalla de bloqueo cancelada en Ledger Stax",
-      "description" : "Si la imagen no era la adecuada, puedes intentarlo de nuevo con una diferente."
+      "title" : "Instalación de la imagen de pantalla de bloqueo\ncancelada en Ledger Stax",
+      "description" : "Si ha sido un error, inténtalo de nuevo."
     },
     "ImageDoesNotExistOnDevice" : {
       "title" : "Tu Ledger Stax no tiene una imagen de pantalla de bloqueo que quitar",
@@ -5880,13 +5938,13 @@
       "transfer" : {
         "stepLabel" : "Cargar",
         "useAnotherPicture" : "Cargar otra imagen",
-        "allowPreview" : "Toca “Cargar imagen” para personalizar la pantalla de bloqueo.",
-        "allowConfirmPreview" : "Permitir la restauración de la imagen de pantalla de bloqueo en {{productName}}",
-        "loadingPicture" : "Cargando...",
+        "allowPreview" : "Toca “Cargar imagen” para\npersonalizar la imagen de pantalla de bloqueo",
+        "allowConfirmPreview" : "Toca “Cargar imagen” para\nrestaurar la imagen de pantalla de bloqueo",
+        "loadingPicture" : "Instalando...",
         "voila" : "¡Voilà!",
         "imageLoaded" : "Imagen cargada en {{productName}}",
         "confirmPicture" : "¿Te gusta lo que ves?\n¡Pues consérvalo!",
-        "confirmRestorePicture" : "Confirmar la restauración de la imagen de pantalla de bloqueo",
+        "confirmRestorePicture" : "Toca \"Conservar\" para\nconfirmar la selección de tu imagen de pantalla de bloqueo",
         "doThisLater" : "Quizás más tarde"
       }
     },
@@ -5914,7 +5972,6 @@
     },
     "progress" : {
       "loading" : "Cargando...",
-      "resolving" : "Resolviendo dependencias",
       "progress" : "No cierres Ledger Live mientras se instalan las aplicaciones.",
       "disclaimer" : "Agrega o elimina aplicaciones en cualquier momento desde Ledger Live.",
       "skippedInfo" : "Algunas aplicaciones no están disponibles. Todavía tienen que desarrollarse para {{ productName }}.",
