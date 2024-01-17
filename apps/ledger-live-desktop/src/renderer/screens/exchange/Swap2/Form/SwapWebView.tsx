@@ -67,12 +67,9 @@ export const SwapWebManifestIDs = {
 
 export const SWAP_WEB_MANIFEST_ID = SwapWebManifestIDs.Demo1;
 
-const SwapWebAppWrapper = styled.div<{ isDevelopment: boolean }>(
-  ({ isDevelopment }) => `
-  ${!isDevelopment ? "height: 0px;" : "flex: 1;"}
+const SwapWebAppWrapper = styled.div<{ isDevelopment: boolean }>`
   width: 100%;
-`,
-);
+`
 
 const SwapWebView = ({ swapState, liveAppUnavailable }: SwapWebProps) => {
   const {
