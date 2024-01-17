@@ -606,6 +606,16 @@
     "TronNotEnoughEnergy" : {
       "title" : "Enerji yetersiz. Ağ ücreti 50 TRX tutarına ulaşabilir."
     },
+    "TronNoUnfrozenResource" : {
+      "title" : "Çekilebilecek çözülmüş hiçbir varlık yok"
+    },
+    "TronInvalidUnDelegateResourceAmount" : {
+      "title" : "Yetkisi devredilmiş yeterli varlık yok"
+    },
+    "TronUnfreezeNotExpired" : {
+      "title" : "Varlıklar henüz çözülmedi",
+      "description" : "{{time}} öncesinde çekemezsiniz, o zamana dek beklemeniz gerekiyor"
+    },
     "UpdateYourApp" : {
       "title" : "Uygulama güncellemesi gerekiyor",
       "description" : "My Ledger'da {{managerAppName}} uygulamasını lütfen kaldırın ve yeniden yükleyin.",
@@ -2313,6 +2323,9 @@
       "VOTE" : "Oylandı",
       "FREEZE" : "Donduruldu",
       "UNFREEZE" : "Çözüldü",
+      "UNDELEGATE_RESOURCE" : "Yetki iptal edildi",
+      "WITHDRAW_EXPIRE_UNFREEZE" : "Çekim",
+      "LEGACYUNFREEZE" : "Çözüldü",
       "REWARD" : "Ödül alındı",
       "FEES" : "Ücretler",
       "OPT_IN" : "Onaylama",
@@ -3687,7 +3700,7 @@
       "description" : "TRX'i dondurarak hem güvenle ödül kazanın hem de varlıklarınızın kontrolünü sağlamayı sürdürün.",
       "steps" : {
         "0" : "Yetkisi devredilen varlıklar size ait olmaya devam eder.",
-        "1" : "Varlıklarınızı 3 gün sonra çözebilirsiniz.",
+        "1" : "Varlıklarınızı istediğiniz zaman çözebilir ve ve 14 günlük çözme döneminden sonra bu varlıklara erişebilirsiniz.",
         "2" : "Ledger cihazınız ile güvenle dondurun ve oylayın."
       },
       "howVotingWorks" : "Oylama nasıl çalışır?",
@@ -5344,7 +5357,7 @@
             "description" : "TRX varlıklarınızla üçüncü bir tarafa yetki devrederek ödül kazanın. Varlıklarınızı dondurmak ve oy vermek için Devam butonuna tıklayın.",
             "bullet" : {
               "delegate" : "Yetkisi devredilen varlıklar size ait olmaya devam eder.",
-              "access" : "Dondurduğunuz varlıklara donduktan 3 gün sonra erişebilirsiniz.",
+              "access" : "Dondurulmuş varlıklar anında çözülebilir ve 14 günlük çözme döneminden sonra bu varlıklara erişilebilir.",
               "ledger" : "Ledger cihazınızı kullanarak güvenle yetki devredin."
             },
             "button" : {
@@ -5362,7 +5375,7 @@
       },
       "unfreeze" : {
         "title" : "Çöz",
-        "description" : "TRX çözerek yeniden bakiyenize ekleyebilirsiniz. Ancak başka ödül kazanamazsınız."
+        "description" : "Kullanılabilir bakiyenize eklemek için TRX'i çözün. Ancak artık başka ödül kazanamazsınız. Varlıklar 14 günlük çözme döneminden sonra kullanılabilir"
       },
       "vote" : {
         "title" : "Oyla",
@@ -5920,6 +5933,9 @@
       "freeze" : "İşlemi tamamlamak için lütfen cihazınızda onaylayın",
       "unfreeze" : "İşlemi tamamlamak için lütfen cihazınızda onaylayın",
       "claimReward" : "İşlemi tamamlamak için lütfen cihazınızda onaylayın",
+      "legacyUnfreeze" : "İşlemi tamamlamak için lütfen cihazınızda onaylayın",
+      "withdrawExpireUnfreeze" : "İşlemi tamamlamak için lütfen cihazınızda onaylayın",
+      "undelegateResource" : "İşlemi tamamlamak için lütfen cihazınızda onaylayın",
       "vote" : "İşlemi tamamlamak için lütfen cihazınızda onaylayın",
       "delegate" : "İşlemi tamamlamak için lütfen cihazınızda onaylayın",
       "redelegate" : "İşlemi tamamlamak için lütfen cihazınızda onaylayın",
@@ -5944,9 +5960,12 @@
     "votes" : "Oylar",
     "validator" : "Doğrulayıcı",
     "infoWording" : {
-      "freeze" : "Dondurulmuş token'lar 3 gün boyunca kilitlenir.",
+      "freeze" : "Bant genişliği veya enerji elde etmek için token'ları dondurun ve eş değer miktarda TRON Power (TP) alın.",
       "unfreeze" : "{{resource}} puanlarınız düşecek ve tüm oylarınız iptal edilecek.",
+      "legacyUnfreeze" : "{{resource}} puanlarınız düşecek ve tüm oylarınız iptal edilecek.",
       "claimReward" : "Ödüller her 24 saatte bir talep edilebilir.",
+      "withdrawExpireUnfreeze" : "Çözme dönemi sona eren çözülmüş varlıklarınız çekilecek",
+      "unDelegateResource" : "{{resource}} için yetki devrini iptal edin",
       "cosmos" : {
         "claimReward" : "Seçilen doğrulayıcıda bekleyen ödüller varsa ödüller otomatik olarak alınır.",
         "redelegate" : "Yetkisi iptal edilen varlıkların kullanılabilir bakiyeye geri dönmesi için {{numberOfDays}} gün beklemeniz gerekir.",
