@@ -606,6 +606,16 @@
     "TronNotEnoughEnergy" : {
       "title" : "A Energia está abaixo do necessário. Você pode pagar até 50 TRX em taxas."
     },
+    "TronNoUnfrozenResource" : {
+      "title" : "Não há recursos descongelados para sacar"
+    },
+    "TronInvalidUnDelegateResourceAmount" : {
+      "title" : "Não há recursos delegados suficientes"
+    },
+    "TronUnfreezeNotExpired" : {
+      "title" : "Recursos ainda não descongelados",
+      "description" : "Você precisa esperar até {{time}} para sacar"
+    },
     "UpdateYourApp" : {
       "title" : "Atualização de aplicativo necessária",
       "description" : "Desinstale e reinstale o aplicativo {{managerAppName}} na Minha Ledger.",
@@ -2313,6 +2323,9 @@
       "VOTE" : "Votado",
       "FREEZE" : "Congelado",
       "UNFREEZE" : "Descongelado",
+      "UNDELEGATE_RESOURCE" : "Desdelegado",
+      "WITHDRAW_EXPIRE_UNFREEZE" : "Saque",
+      "LEGACYUNFREEZE" : "Descongelado",
       "REWARD" : "Recompensa resgatada",
       "FEES" : "Taxas",
       "OPT_IN" : "Aderir",
@@ -3687,7 +3700,7 @@
       "description" : "Congele TRX para ganhar prêmios de forma segura, mantendo o controle de seus ativos.",
       "steps" : {
         "0" : "Os ativos delegados continuam sendo seus.",
-        "1" : "Você pode descongelar seus ativos após 3 dias.",
+        "1" : "Você pode descongelar seus ativos a qualquer momento. Eles estarão acessíveis após o período de descongelamento de 14 dias.",
         "2" : "Congele e vote com segurança com seu dispositivo Ledger."
       },
       "howVotingWorks" : "Como funciona a votação",
@@ -5344,7 +5357,7 @@
             "description" : "Delegar TRX a um candidato terceiro para receber recompensas. Clique em continuar para congelar ativos e votar.",
             "bullet" : {
               "delegate" : "Ativos delegados ainda são seus.",
-              "access" : "Você pode acessar seus ativos 3 dias após o congelamento.",
+              "access" : "Os ativos congelados podem ser descongelados imediatamente e se tornarão acessíveis após o período de descongelamento de 14 dias.",
               "ledger" : "Delegue com segurança usando seu dispositivo Ledger."
             },
             "button" : {
@@ -5362,7 +5375,7 @@
       },
       "unfreeze" : {
         "title" : "Descongelar",
-        "description" : "Descongele TRX para adicioná-los de volta ao seu saldo disponível. Você não ganhará mais recompensas."
+        "description" : "Descongele TRX para adicioná-los de volta ao seu saldo disponível. Você não receberá mais recompensas. Os ativos estarão disponíveis após o período de descongelamento de 14 dias"
       },
       "vote" : {
         "title" : "Votar",
@@ -5920,6 +5933,9 @@
       "freeze" : "Em seu dispositivo, confirme para finalizar a operação",
       "unfreeze" : "Em seu dispositivo, confirme para finalizar a operação",
       "claimReward" : "Em seu dispositivo, confirme para finalizar a operação",
+      "legacyUnfreeze" : "Em seu dispositivo, confirme para finalizar a operação",
+      "withdrawExpireUnfreeze" : "Em seu dispositivo, confirme para finalizar a operação",
+      "undelegateResource" : "Em seu dispositivo, confirme para finalizar a operação",
       "vote" : "Em seu dispositivo, confirme para finalizar a operação",
       "delegate" : "Em seu dispositivo, confirme para finalizar a operação",
       "redelegate" : "Em seu dispositivo, confirme para finalizar a operação",
@@ -5944,9 +5960,12 @@
     "votes" : "Votos",
     "validator" : "Validador",
     "infoWording" : {
-      "freeze" : "Tokens congelados são bloqueados por um período de 3 dias.",
+      "freeze" : "Congele tokens para adquirir largura de banda ou energia e receba uma quantia equivalente de TRON Power (TP).",
       "unfreeze" : "Seus pontos {{resource}} serão reduzidos, e todos os seus votos serão cancelados.",
+      "legacyUnfreeze" : "Seus {{resource}} pontos serão reduzidos e todos os seus votos serão cancelados.",
       "claimReward" : "As recompensas podem ser resgatadas a cada 24 horas.",
+      "withdrawExpireUnfreeze" : "Seus recursos não congelados que passaram do período de descongelamento serão sacados",
+      "unDelegateResource" : "Cancelar a delegação de {{resource}}",
       "cosmos" : {
         "claimReward" : "Se o validador selecionado tiver recompensas pendentes, elas serão automaticamente resgatadas.",
         "redelegate" : "Você terá que esperar {{numberOfDays}} dias para que os ativos desdelegados retornem ao saldo disponível.",
