@@ -1,0 +1,5 @@
+{
+  "entry": ["src/index.tsx"],
+  "ignoreUnimported": ["@ledgerhq/cryptoassets"],
+  "ignoreUnresolved": []
+}
