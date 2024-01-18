@@ -69,6 +69,7 @@ export const SWAP_WEB_MANIFEST_ID = SwapWebManifestIDs.Demo1;
 
 const SwapWebAppWrapper = styled.div`
   width: 100%;
+  flex: 1;
 `
 
 const SwapWebView = ({ swapState, liveAppUnavailable }: SwapWebProps) => {
