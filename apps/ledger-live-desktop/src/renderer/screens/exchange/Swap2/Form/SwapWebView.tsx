@@ -65,7 +65,7 @@ export const SwapWebManifestIDs = {
   Demo1: "swap-live-app-demo-1",
 };
 
-export const SWAP_WEB_MANIFEST_ID = SwapWebManifestIDs.Demo1;
+export const SWAP_WEB_MANIFEST_ID = SwapWebManifestIDs.Demo0;
 
 const SwapWebAppWrapper = styled.div<{ isDevelopment: boolean }>(
   ({ isDevelopment }) => `
